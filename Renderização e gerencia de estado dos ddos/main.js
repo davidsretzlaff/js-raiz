@@ -34,7 +34,7 @@ function renderProduct (product)
                         <img src="https://lorempixel.com/500/300" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">${product.name}</h5>
-                            <small>${product.value}</small>
+                            <small>Valor: R$${product.value}</small>
                             <p class="card-text">${product.description}</p>
                             <button data-add-index="${product.id}" class="btn btn-primary">Adicionar</button>
                         </div>
@@ -53,3 +53,9 @@ function renderGaleryProduct()
     return resultHtml;
 }
 document.querySelector(".store").innerHTML = renderGaleryProduct();
+
+
+
+
+
+
