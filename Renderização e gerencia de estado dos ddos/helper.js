@@ -20,7 +20,16 @@ const namesLowercase = names.map(function(name){
 //using arrow
 const namesLowercaseAndArrow = names.map(name =>  name.toLowerCase());
 console.log("namesLowercaseAndArrow",namesLowercaseAndArrow);
+// using map with array object
+const people = [
+    {id: 1,
+    name : 'david' 
+},{
+    id: 2,
+    name:'outro'
+}
+];
+console.log('test map',people.map(i => i.name));
 
 // EXAMPLE FILTER
 let mult2 = [];
-
