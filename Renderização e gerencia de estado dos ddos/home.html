@@ -5,6 +5,7 @@
     <meta charset=”UTF-8”>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
     <title>car Vanilla</title>
 </head>
 
@@ -13,27 +14,40 @@
         <h1></h1>
         <div class="row">
             <div class="col-sm-8">
-                <div class="row loja">
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="card">
-                                <img src="https://lorempixel.com/500/300" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">JS raiz para fw</h5>
-                                    <small>R$300,00</small>
-                                    <p class="card-text">o melhor curso</p>
-                                    <a href="#" class="btn btn-primary">Adicionar</a>
-                                </div>
+                <div class="row store"></div>
+            </div>
+            <div class="col-sm-4">
+                <div class="col-sm-12 mb-3">
+                    <div class="car">
+                        <div class="card car_itens">
+                            <div class="card-body">
+                                <h5 class="card-title">JS raiz para fw</h5>
+                                <p>R$300,00</p>
+                                <p class="card-text">Preço Unidade : R$100 | Quantidade: 1</p>
+                                <p class="cardt-text">Valor: R$100</p>
+                                <button class="btn btn-danger btn-sm">Remover</button>
                             </div>
                         </div>
                     </div>
+                    <div class="car">
+                        <div class="card car_itens">
+                            <div class="card-body">
+                                <h5 class="card-title">JS raiz para fw</h5>
+                                <p>R$300,00</p>
+                                <p class="card-text">Preço Unidade : R$100 | Quantidade: 1</p>
+                                <p class="cardt-text">Valor: R$100</p>
+                                <button class="btn btn-danger btn-sm">Remover</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car_total mt-2 p-3">
+                        R$ <strong> 100</strong>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-4"></div>
         </div>
     </div>
-
-
+<script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
