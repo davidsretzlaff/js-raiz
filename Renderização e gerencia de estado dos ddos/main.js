@@ -24,9 +24,25 @@ const products =[
         value: 150
     }
 ]
+const car_Products ={
+    1 : {
+        id : 1,
+        name: "shorts",
+        description: "summer shorts",
+        value: 300,
+        quantity : 2
+    },
+    2:{
+        id : 2,
+        name: "jacket",
+        description: "jacket for winter",
+        value: 400,
+        quantity: 1
+    }
+}
 
 
-function renderProduct (product)
+function renderProduct (product) 
 {
     return `<div class="col-sm-4 mb-3">
                 <div class="card">
@@ -43,17 +59,48 @@ function renderProduct (product)
             </div>`;
 }
 
+function renderProductCar(product)
+{   
+    return `<div class="car">
+                <div class="card car_itens">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.name}</h5>                        
+                        <p class="card-text">Preço Unidade : R$${product.value} | Quantidade: ${product.quantity} </p>
+                        <p class="cardt-text">Valor: R$${product.value * product.quantity} </p>
+                        <button class="btn btn-danger btn-sm">Remover</button>
+                    </div>
+                </div>
+            </div>`;
+}
+function renderyGaleryProductCar(){
+    let html = '';
+    for(let id in car_Products){
+       html += renderProductCar(car_Products[id]);
+    };
+    return html;
+}
+
 function renderGaleryProduct()
 {
-    let resultHtml = '';    
-    for(let prop in products)
+    return products.reduce((result, index) => (result += renderProduct(index)),'');
+}
+
+function addTotal()
+{
+    let totalAmount = 0;
+    for(let i in car_Products)
     {
-      resultHtml += renderProduct(products[prop]);      
-    }    
-    return resultHtml;
+        totalAmount += car_Products[i].value * car_Products[i].quantity;
+    }
+    return renderTotal(totalAmount);
+}
+function renderTotal(value)
+{
+    return `R$<strong> ${value}</strong>`;
 }
 document.querySelector(".store").innerHTML = renderGaleryProduct();
-
+document.querySelector(".store-car").innerHTML = renderyGaleryProductCar();
+document.querySelector(".car_total").innerHTML = addTotal();
 
 
 
